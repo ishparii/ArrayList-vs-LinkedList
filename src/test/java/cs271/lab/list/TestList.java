@@ -6,6 +6,7 @@ import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.After;
@@ -18,8 +19,9 @@ public class TestList {
 
 	@Before
 	public void setUp() throws Exception {
-		list = new ArrayList<Integer>();
+		//list = new ArrayList<Integer>();
 		// TODO also try with a LinkedList - does it make any difference?
+		list = new LinkedList<Integer>();
 	}
 
 	@After
