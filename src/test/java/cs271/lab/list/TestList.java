@@ -172,6 +172,7 @@ public class TestList {
 		// TODO in a single statement using retainAll and Arrays.asList,
 		// remove items from the list to make the following assertions pass
 		// (without touching the assertions themselves)
+		list.retainAll(Arrays.asList(77, 77, 77));
 		assertEquals(3, list.size());
 		assertEquals(Arrays.asList(77, 77, 77), list);
 	}
