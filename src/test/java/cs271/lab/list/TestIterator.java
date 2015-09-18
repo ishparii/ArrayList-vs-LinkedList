@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -81,7 +82,7 @@ public class TestIterator {
 		}
 		// TODO using assertEquals and Arrays.asList (see above)
 		// express which values are left in the list
-		fail("Not yet implemented"); // remove this line when done
+		assertEquals(Arrays.asList(33, 44, 55, 66), list);
 	}
 
 	@Test
