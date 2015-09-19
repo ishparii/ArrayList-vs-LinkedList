@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestPerformance {
@@ -20,6 +21,9 @@ public class TestPerformance {
 
 	private List<Integer> linkedList;
 
+	private long start_time;
+	private long end_time;
+
 	@Before
 	public void setUp() throws Exception {
 		arrayList = new ArrayList<Integer>(SIZE);
@@ -28,10 +32,14 @@ public class TestPerformance {
 			arrayList.add(i);
 			linkedList.add(i);
 		}
+		start_time = System.currentTimeMillis();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		end_time = System.currentTimeMillis();
+		double performance_time = (start_time - end_time) / 1000.0;
+		System.out.println(performance_time);
 		arrayList = null;
 		linkedList = null;
 	}
@@ -42,6 +50,7 @@ public class TestPerformance {
 			linkedList.add(0, 77);
 			linkedList.remove(0);
 		}
+		System.out.println("testLinkedListAddRemove()");
 	}
 
 	@Test
@@ -50,7 +59,9 @@ public class TestPerformance {
 			arrayList.add(0, 77);
 			arrayList.remove(0);
 		}
+		System.out.println("testArrayListAddRemove()");
 	}
+
 
 	@Test
 	public void testLinkedListAccess() {
@@ -58,6 +69,7 @@ public class TestPerformance {
 		for (int r = 0; r < REPS; r++) {
 			sum += linkedList.get(r % SIZE);
 		}
+		System.out.println("testLinkedListAccess()");
 	}
 
 	@Test
@@ -66,5 +78,6 @@ public class TestPerformance {
 		for (int r = 0; r < REPS; r++) {
 			sum += arrayList.get(r % SIZE);
 		}
+		System.out.println("testArrayListAccess()");
 	}
 }
