@@ -69,18 +69,3 @@ add and remove operations increases with SIZE for ArrayList.
 LinkedList performs better with add and remove operations as time remains 
 almost the same with incresing of SIZE. However, time for accessing elements
 within LinkedList increses along with SIZE.
-
-
-
-
-
-
-
-
-
-
-
-
-LinkedList:	
-	testLinkedListAccess()		0.056
-	testLinkedListAddRemove() 	0.105

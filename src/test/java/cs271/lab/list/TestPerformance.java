@@ -44,7 +44,6 @@ public class TestPerformance {
 		linkedList = null;
 	}
 
-	@Ignore
 	@Test
 	public void testLinkedListAddRemove() {
 		for (int r = 0; r < REPS; r++) {
@@ -54,7 +53,6 @@ public class TestPerformance {
 		System.out.println("testLinkedListAddRemove()");
 	}
 
-	@Ignore
 	@Test
 	public void testArrayListAddRemove() {
 		for (int r = 0; r < REPS; r++) {
@@ -74,7 +72,6 @@ public class TestPerformance {
 		System.out.println("testLinkedListAccess()");
 	}
 
-	@Ignore
 	@Test
 	public void testArrayListAccess() {
 		long sum = 0;
