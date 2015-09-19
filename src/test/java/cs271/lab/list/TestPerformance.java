@@ -13,7 +13,7 @@ public class TestPerformance {
 
 	// TODO run test and record running times for SIZE = 10, 100, 1000, 10000
 	// which of the two lists performs better as the size increases?
-	private final int SIZE = 100;
+	private final int SIZE = 10000;
 
 	private final int REPS = 1000000;
 
@@ -44,6 +44,7 @@ public class TestPerformance {
 		linkedList = null;
 	}
 
+	@Ignore
 	@Test
 	public void testLinkedListAddRemove() {
 		for (int r = 0; r < REPS; r++) {
@@ -53,6 +54,7 @@ public class TestPerformance {
 		System.out.println("testLinkedListAddRemove()");
 	}
 
+	@Ignore
 	@Test
 	public void testArrayListAddRemove() {
 		for (int r = 0; r < REPS; r++) {
@@ -72,6 +74,7 @@ public class TestPerformance {
 		System.out.println("testLinkedListAccess()");
 	}
 
+	@Ignore
 	@Test
 	public void testArrayListAccess() {
 		long sum = 0;
