@@ -13,7 +13,7 @@ public class TestPerformance {
 
 	// TODO run test and record running times for SIZE = 10, 100, 1000, 10000
 	// which of the two lists performs better as the size increases?
-	private final int SIZE = 10;
+	private final int SIZE = 100;
 
 	private final int REPS = 1000000;
 
@@ -38,7 +38,7 @@ public class TestPerformance {
 	@After
 	public void tearDown() throws Exception {
 		end_time = System.currentTimeMillis();
-		double performance_time = (start_time - end_time) / 1000.0;
+		double performance_time = (end_time - start_time) / 1000.0;
 		System.out.println(performance_time);
 		arrayList = null;
 		linkedList = null;
