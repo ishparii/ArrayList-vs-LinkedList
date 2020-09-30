@@ -68,4 +68,4 @@ remains almost the same for all of the values of SIZE. However, time of
 add and remove operations increases with SIZE for ArrayList.
 LinkedList performs better with add and remove operations as time remains 
 almost the same with incresing of SIZE. However, time for accessing elements
-within LinkedList increses along with SIZE.
+within LinkedList increses along with SIZE but if we are accessing the head node then time remains constant.
